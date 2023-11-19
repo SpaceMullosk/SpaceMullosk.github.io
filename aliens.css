@@ -1,0 +1,96 @@
+body {
+	background-color: black;
+	color: white; /* Set text color to white for better visibility */
+}
+img {
+	width: 480px; /* Adjust this value to your desired width */
+	height: auto; /* This ensures the aspect ratio is maintained */
+}
+h2 {
+	color: rgb(26, 213, 9);
+	background-color: none;
+	font-family: sans-serif;
+}
+body {
+	margin-right: 24px;
+	margin-left: 24px;
+}
+
+.container {
+	text-align: center;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+	grid-template-rows: 1em 1em 1em;
+	grid-auto-rows: 2em;
+	grid-gap: 280px;
+	margin: 0 100px;
+}
+.container h2 {
+	margin: 0;
+	padding: 0em;
+}
+
+a {
+	color: rgb(26, 213, 9);
+	text-decoration: none;
+	text-align: center;
+}
+a:hover {
+	color: aqua;
+}
+.image1 {
+	height: 10em;
+	width: auto;
+}
+.image2 {
+	height: 10em;
+	width: auto;
+}
+.image3 {
+	height: 10em;
+	width: auto;
+}
+
+.image1 {
+	transition: 1s;
+}
+.image1:hover {
+	transform: scale(3);
+	z-index: 2;
+}
+
+.image2 {
+	transition: 1s;
+}
+.image2:hover {
+	transform: scale(3);
+	z-index: 2;
+}
+.image3 {
+	transition: 1s;
+}
+.image3:hover {
+	transform: scale(3);
+	z-index: 2;
+}
+.image1.iloveufo,
+.image1.ilovegreys {
+	height: 5em; /* Adjust the height to your desired size */
+	width: auto; /* Auto-adjust width to maintain aspect ratio */
+}
+.ufo-image {
+	height: 6em; /* Adjust the height to your desired size */
+	width: auto; /* Auto-adjust width to maintain aspect ratio */
+}
+.disclosure-image {
+	height: 6em; /* Adjust the height to your desired size */
+	width: auto; /* Auto-adjust width to maintain aspect ratio */
+}
+.saucer-image {
+	height: 6em; /* Adjust the height to your desired size */
+	width: auto; /* Auto-adjust width to maintain aspect ratio */
+}
+.larger-youtube {
+	height: 300px; /* Adjust the height to your desired size */
+	width: auto; /* Auto-adjust width to maintain aspect ratio */
+}
