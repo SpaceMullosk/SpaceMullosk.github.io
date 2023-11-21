@@ -1,3 +1,16 @@
+@font-face {
+	font-family: raleway;
+	src: url(Raleway/Raleway-VariableFont_wght.ttf);
+}
+@font-face {
+	font-family: raleway-light;
+	src: url(Raleway/static/Raleway-Light.ttf);
+}
+@font-face {
+	font-family: raleway-SemiBold;
+	src: url(Raleway/static/Raleway-SemiBold.ttf);
+}
+
 body {
 	background-color: black;
 	color: white; /* Set text color to white for better visibility */
@@ -11,12 +24,12 @@ img {
 h2 {
 	color: rgb(26, 213, 9);
 	background-color: none;
-	font-family: Tahoma;
+	font-family: 'raleway';
 }
 h1 {
 	color: rgb(26, 213, 9);
 	background-color: none;
-	font-family: Arial;
+	font-family: 'raleway-light';
 }
 .container {
 	text-align: center;
@@ -25,6 +38,12 @@ h1 {
 	grid-template-rows: 1em 1em 1em;
 	grid-auto-rows: 2em;
 	grid-gap: 250px;
+}
+
+p {
+	font-family: 'raleway';
+	color: rgb(26, 213, 9);
+	font-size: 33px;
 }
 a {
 	color: rgb(26, 213, 9);
@@ -45,7 +64,6 @@ a:hover {
 	height: 10em;
 	width: auto;
 }
-
 .image1 {
 	transition: 1s;
 }
@@ -83,4 +101,19 @@ body {
 	.container {
 		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 	}
+}
+.container {
+	margin-bottom: 69px;
+	margin-top: 50px;
+}
+
+.container-again {
+	margin-top: 300px;
+}
+.container2 {
+	margin-bottom: 800px;
+	margin-top: 66px;
+}
+.spider-man {
+	margin-top: 25px;
 }
