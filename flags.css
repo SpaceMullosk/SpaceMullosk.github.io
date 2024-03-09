@@ -73,3 +73,31 @@ a:hover {
 	transform: scale(1.2);
 	z-index: 2;
 }
+body {
+	background-color: black;
+	color: white;
+	margin-right: 24px;
+	margin-left: 24px;
+}
+
+/* Add the styles for the home button */
+.home-button {
+	position: fixed;
+	top: 10px;
+	right: 10px;
+	background-color: rgb(26, 213, 9);
+	color: black;
+	padding: 10px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+/* Style the link inside the button */
+.home-button a {
+	color: black;
+	text-decoration: none;
+}
+
+/* Rest of your existing CSS */
+
