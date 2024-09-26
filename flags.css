@@ -1,33 +1,62 @@
+@font-face {
+	font-family: raleway;
+	src: url(Raleway/Raleway-VariableFont_wght.ttf);
+}
+@font-face {
+	font-family: raleway-light;
+	src: url(Raleway/static/Raleway-Light.ttf);
+}
+@font-face {
+	font-family: raleway-SemiBold;
+	src: url(Raleway/static/Raleway-SemiBold.ttf);
+}
+
 body {
 	background-color: black;
 	color: white; /* Set text color to white for better visibility */
-}
-img {
-	width: 480px; /* Adjust this value to your desired width */
-	height: auto; /* This ensures the aspect ratio is maintained */
-}
-h2 {
-	color: rgb(26, 213, 9);
-	background-color: none;
-	font-family: sans-serif;
-}
-body {
 	margin-right: 24px;
 	margin-left: 24px;
+}
+
+img {
+	width: 480px; /* Default width for images */
+	height: auto; /* Ensures the aspect ratio is maintained */
+	margin-top: 19px;
+}
+
+/* Responsive logo styling for mobile view */
+.responsive-logo {
+	width: 100%; /* Logo will take the full width of its container */
+	max-width: 480px; /* Maximum width for larger screens */
+	height: auto; /* Maintain aspect ratio */
+}
+
+h2 {
+	color: rgb(26, 213, 9);
+	font-family: 'raleway-light';
 }
 
 .container {
 	text-align: center;
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-	grid-template-rows: 1em 1em 1em;
-	grid-auto-rows: 2em;
-	grid-gap: 280px;
-	margin: 0 100px;
+	grid-template-columns: repeat(
+		auto-fit,
+		minmax(200px, 1fr)
+	); /* Improved grid for better responsiveness */
+	grid-gap: 40px; /* Adjusted grid gap to prevent cluttering */
+	margin: 0 auto;
+	padding: 20px; /* Added padding around the container */
 }
+
+.container div {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
 .container h2 {
 	margin: 0;
-	padding: 0em;
+	padding: 0;
 }
 
 a {
@@ -35,49 +64,27 @@ a {
 	text-decoration: none;
 	text-align: center;
 }
+
 a:hover {
 	color: aqua;
 }
-.image1 {
-	height: 10em;
-	width: auto;
-}
-.image2 {
-	height: 10em;
-	width: auto;
-}
+
+/* Responsive image handling for the flags */
+.image1,
+.image2,
 .image3 {
-	height: 10em;
-	width: auto;
+	max-width: 200px; /* Ensure images are sized appropriately */
+	height: auto;
+	transition: 1s;
+	border: 2px solid rgb(26, 213, 9);
 }
 
-.image1 {
-	transition: 1s;
-}
-.image1:hover {
-	transform: scale(1.2);
-	z-index: 2;
-}
-
-.image2 {
-	transition: 1s;
-}
-.image2:hover {
-	transform: scale(1.2);
-	z-index: 2;
-}
-.image3 {
-	transition: 1s;
-}
+.image1:hover,
+.image2:hover,
 .image3:hover {
-	transform: scale(1.2);
+	transform: scale(1.2); /* Hover effect to enlarge the image */
 	z-index: 2;
-}
-body {
-	background-color: black;
-	color: white;
-	margin-right: 24px;
-	margin-left: 24px;
+	border: 2px solid rgb(26, 213, 9);
 }
 
 /* Add the styles for the home button */
@@ -91,6 +98,7 @@ body {
 	border: none;
 	border-radius: 5px;
 	cursor: pointer;
+	margin-bottom: 10px;
 }
 
 /* Style the link inside the button */
@@ -99,5 +107,34 @@ body {
 	text-decoration: none;
 }
 
-/* Rest of your existing CSS */
+/* Responsive adjustments for mobile screens */
+@media (max-width: 768px) {
+	.container {
+		grid-template-columns: repeat(
+			auto-fit,
+			minmax(150px, 1fr)
+		); /* Adjust grid layout for smaller screens */
+		grid-gap: 20px; /* Reduce grid gap for mobile screens */
+		margin: 0 20px; /* Reduce margins for smaller screens */
+	}
 
+	/* Ensure the main logo image resizes for mobile */
+	.responsive-logo {
+		width: 100%; /* Logo takes full width on smaller screens */
+		max-width: 100%; /* Remove the fixed maximum width */
+	}
+
+	/* Adjust the image sizes for mobile */
+	.image1,
+	.image2,
+	.image3 {
+		height: auto; /* Allow height to adjust dynamically */
+		width: 100%; /* Make images responsive */
+	}
+}
+/* Hide extra text on smaller screens */
+@media (max-width: 430px) {
+	.extra-text {
+		display: none;
+	}
+}
