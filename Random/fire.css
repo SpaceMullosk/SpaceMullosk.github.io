@@ -39,7 +39,7 @@ body {
 
 /* Styling for images */
 img {
-	width: 100%; /* Make the image responsive */
+	width: 50%; /* Make the image responsive */
 	height: auto; /* Maintain aspect ratio */
 	max-width: 800px; /* Limit the maximum width of the image */
 	margin-top: 19px;
