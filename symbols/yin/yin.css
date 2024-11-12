@@ -1,0 +1,113 @@
+/* General body styles */
+body {
+	background-color: black;
+	color: white; /* Set text color to white for better visibility */
+	padding-left: 24px;
+	padding-right: 24px;
+	margin: 0;
+	box-sizing: border-box; /* Ensure padding and margins don't affect element widths */
+}
+
+/* Font face */
+@font-face {
+	font-family: raleway;
+	src: url(Raleway/Raleway-VariableFont_wght.ttf);
+}
+@font-face {
+	font-family: raleway-light;
+	src: url(Raleway/static/Raleway-Light.ttf);
+}
+@font-face {
+	font-family: raleway-SemiBold;
+	src: url(Raleway/static/Raleway-SemiBold.ttf);
+}
+
+/* Image styles */
+img {
+	width: 100%; /* Ensure images take full width available */
+	max-width: 480px; /* Set a max width to prevent images from being too large */
+	height: auto; /* Maintain aspect ratio */
+	display: block;
+	margin: 0 auto; /* Center the images */
+}
+
+/* Spacing between images in the container */
+.container {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive grid */
+	grid-gap: 24px; /* Add space between images */
+	justify-items: center; /* Center images horizontally */
+	margin: 20px 0; /* Space around the grid container */
+	padding: 0 16px; /* Padding on both sides */
+}
+
+/* Responsive behavior */
+@media screen and (max-width: 768px) {
+	.container {
+		grid-template-columns: repeat(
+			auto-fit,
+			minmax(150px, 1fr)
+		); /* Adjust the minimum width on smaller screens */
+		grid-gap: 16px; /* Reduce gap on smaller screens */
+	}
+}
+
+/* Title image scaling */
+header img {
+	width: 100%; /* Title image takes the full width of the container */
+	height: auto; /* Maintain aspect ratio */
+	max-width: 960px; /* Set a maximum width */
+	margin: 0 auto; /* Center the title image */
+}
+
+/* Center and make <h2> responsive */
+h2 {
+	color: rgb(26, 213, 9);
+	font-family: 'raleway-light';
+	text-align: center; /* Center text */
+	padding: 0 16px; /* Add padding to prevent text from touching the edges */
+	line-height: 1.5em; /* Improve readability */
+	font-size: 1.5rem; /* Default font size */
+}
+
+/* Make <h2> responsive */
+@media screen and (max-width: 768px) {
+	h2 {
+		font-size: 1.2rem; /* Reduce font size on smaller screens */
+	}
+}
+
+@media screen and (max-width: 480px) {
+	h2 {
+		font-size: 1rem; /* Further reduce font size on very small screens */
+	}
+}
+
+/* Button styles */
+.home-button {
+	position: fixed;
+	top: 10px;
+	right: 10px;
+	background-color: rgb(26, 213, 9);
+	color: black;
+	padding: 10px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	margin-bottom: 10px;
+}
+
+/* Link inside button */
+.home-button a {
+	color: black;
+	text-decoration: none;
+}
+
+/* Image hover effect */
+.image1 {
+	transition: transform 1s;
+}
+.image1:hover {
+	transform: scale(1.2);
+	z-index: 2;
+}
