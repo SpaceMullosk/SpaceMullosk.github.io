@@ -1,0 +1,118 @@
+@font-face {
+	font-family: raleway;
+	src: url(Raleway/Raleway-VariableFont_wght.ttf);
+}
+@font-face {
+	font-family: raleway-light;
+	src: url(Raleway/static/Raleway-Light.ttf);
+}
+@font-face {
+	font-family: raleway-SemiBold;
+	src: url(Raleway/static/Raleway-SemiBold.ttf);
+}
+
+body {
+	padding-left: 24px;
+	padding-right: 24px;
+}
+
+body {
+	background-color: black;
+	color: white; /* Set text color to white for better visibility */
+	padding-left: 24px;
+	padding-right: 24px;
+}
+
+img {
+	width: 480px; /* Adjust this value to your desired width */
+	height: auto; /* This ensures the aspect ratio is maintained */
+}
+h2 {
+	color: rgb(26, 213, 9);
+	background-color: none;
+	font-family: sans-serif;
+}
+h1 {
+	color: rgb(26, 213, 9);
+	background-color: none;
+	font-family: sans-serif;
+}
+.container,
+.container2,
+.container3 {
+	text-align: center;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+	grid-template-rows: 1em 1em 1em;
+	grid-auto-rows: 2em;
+	grid-gap: 250px;
+}
+a {
+	color: rgb(26, 213, 9);
+}
+a:hover {
+	color: aqua;
+}
+.image1 {
+	height: 10em;
+	width: auto;
+}
+.image2 {
+	height: 10em;
+	width: auto;
+}
+.image3 {
+	height: 10em;
+	width: auto;
+}
+
+.image1 {
+	transition: 1s;
+}
+.image1:hover {
+	transform: scale(1.2);
+	z-index: 2;
+}
+
+.image2 {
+	transition: 1s;
+}
+.image2:hover {
+	transform: scale(1.2);
+	z-index: 2;
+}
+.image3 {
+	transition: 1s;
+}
+.image3:hover {
+	transform: scale(1.2);
+	z-index: 2;
+}
+.container2,
+.container3 {
+	margin-top: 25px;
+	padding-top: 25px;
+}
+.container,
+.container2 {
+	margin-bottom: 100px;
+	padding-bottom: 100px;
+}
+.home-button {
+	position: fixed;
+	top: 10px;
+	right: 10px;
+	background-color: rgb(26, 213, 9);
+	color: black;
+	padding: 10px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	margin-bottom: 10px;
+}
+
+/* Style the link inside the button */
+.home-button a {
+	color: black;
+	text-decoration: none;
+}
