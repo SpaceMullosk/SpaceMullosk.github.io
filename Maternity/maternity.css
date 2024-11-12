@@ -1,3 +1,16 @@
+@font-face {
+	font-family: raleway;
+	src: url(Raleway/Raleway-VariableFont_wght.ttf);
+}
+@font-face {
+	font-family: raleway-light;
+	src: url(Raleway/static/Raleway-Light.ttf);
+}
+@font-face {
+	font-family: raleway-SemiBold;
+	src: url(Raleway/static/Raleway-SemiBold.ttf);
+}
+
 .container {
 	padding-top: 24px;
 }
@@ -16,7 +29,7 @@ img {
 h2 {
 	color: rgb(26, 213, 9);
 	background-color: none;
-	font-family: sans-serif;
+	font-family: 'raleway-light';
 }
 body {
 	margin-right: 24px;
@@ -79,4 +92,22 @@ a:hover {
 .image3:hover {
 	transform: scale(1.2);
 	z-index: 2;
+}
+.home-button {
+	position: fixed;
+	top: 10px;
+	right: 10px;
+	background-color: rgb(26, 213, 9);
+	color: black;
+	padding: 10px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	margin-bottom: 10px;
+}
+
+/* Style the link inside the button */
+.home-button a {
+	color: black;
+	text-decoration: none;
 }
