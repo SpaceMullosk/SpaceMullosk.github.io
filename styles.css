@@ -1,64 +1,119 @@
-<!DOCTYPE html>
+@font-face {
+	font-family: raleway;
+	src: url(Raleway/Raleway-VariableFont_wght.ttf);
+}
+@font-face {
+	font-family: raleway-light;
+	src: url(Raleway/static/Raleway-Light.ttf);
+}
+@font-face {
+	font-family: raleway-SemiBold;
+	src: url(Raleway/static/Raleway-SemiBold.ttf);
+}
 
-<html lang="en">
-	<head>
-		
-		<meta charset="UTF-8" />
-		<meta name="Space Mollusk Graphics" content="Immerse yourself in a universe where imagination knows no bounds, and originality takes center stage." />
-		<title>Space Mollusk</title>
+body {
+	background-color: black;
+	color: white; /* Set text color to white for better visibility */
+	padding-left: 25px;
+	padding-right: 25px;
+}
+img {
+	width: 480px; /* Adjust this value to your desired width */
+	height: auto; /* This ensures the aspect ratio is maintained */
+}
+h2 {
+	color: rgb(26, 213, 9);
+	background-color: none;
+	font-family: 'raleway';
+}
+h1 {
+	color: rgb(26, 213, 9);
+	background-color: none;
+	font-family: 'raleway-light';
+}
+.container {
+	text-align: center;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+	grid-template-rows: 1em 1em 1em;
+	grid-auto-rows: 2em;
+	grid-gap: 250px;
+}
 
-        <link rel="stylesheet" href="styles.css" />
-		</head>
-		<body>
-        <header>
-			
-			<img src="title.png" alt="Space Mollusk logo" />
-		</header>
-        <main>
-     <h1>Welcome to our otherworldly emporium! Explore a universe of extraterrestrial wonder with our collection featuring captivating designs adorning t-shirts, mugs, and an array of cosmic paraphernalia.</h1>
-	
-	
-	 <section class= "container">
-	
-	
-		
-		<div class="world-container">
-			<a href="flags.html">
+p {
+	font-family: 'raleway';
+	color: rgb(26, 213, 9);
+	font-size: 33px;
+}
+a {
+	color: rgb(26, 213, 9);
+	text-decoration: none;
+}
+a:hover {
+	color: aqua;
+}
+.image1 {
+	height: 10em;
+	width: auto;
+}
+.image2 {
+	height: 10em;
+	width: auto;
+}
+.image3 {
+	height: 10em;
+	width: auto;
+}
+.image1 {
+	transition: 1s;
+}
+.image1:hover {
+	transform: scale(1.2);
+	z-index: 2;
+}
 
-			<img src="images/world.png" alt="Symbols Icon" class="image2">
-			<h2><a href="flags.html">Flags</h2></a>
-		</div>
-		
-		
-		<div class="world-container">
-			<a href="symbols/symbols.html">
+.image2 {
+	transition: 1s;
+}
+.image2:hover {
+	transform: scale(1.2);
+	z-index: 2;
+}
+.image3 {
+	transition: 1s;
+}
+.image3:hover {
+	transform: scale(1.2);
+	z-index: 2;
+}
+body {
+	margin-left: 24px;
+	margin-right: 24px;
+}
+@media (min-width: 600px) {
+	.container {
+		grid-gap: 240px;
+	}
+}
 
-			<img src="images/symbol.png" alt="Symbols Icon" class="image2">
-			<h2><a href="symbols.html">Symbols</h2></a>
-		</div>
-		
-		
-		
-		<div>   <a href="Maternity/maternity.html">
-			<img src="images/baby.png" alt="Maternity Shirts Icon" class="image3">
-			<h2><a href="maternity.html">Maternity Shirts</h2></a>
-		</div>
+/* Styles for screens wider than 900px */
+@media (min-width: 900px) {
+	.container {
+		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	}
+}
+.container {
+	margin-bottom: 0px;
+	margin-top: 50px;
+}
 
-	</section>
-	
-
-	<section>
-
-		
-	
-
-	
-
-		
-	
-	</div>
-	</section>
-	</main>
-
-
-	
+.container-again {
+	margin-top: 0px;
+}
+.container2 {
+	margin-bottom: 800px;
+	margin-top: 66px;
+}
+.spider-man {
+	margin-top: 25px;
+}
