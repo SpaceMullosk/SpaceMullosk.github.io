@@ -1,14 +1,4 @@
-/* General body styles */
-body {
-	background-color: black;
-	color: white; /* Set text color to white for better visibility */
-	padding-left: 24px;
-	padding-right: 24px;
-	margin: 0;
-	box-sizing: border-box; /* Ensure padding and margins don't affect element widths */
-}
-
-/* Font face */
+/* Global Styles */
 @font-face {
 	font-family: raleway;
 	src: url(Raleway/Raleway-VariableFont_wght.ttf);
@@ -22,68 +12,46 @@ body {
 	src: url(Raleway/static/Raleway-SemiBold.ttf);
 }
 
-/* Image styles */
-img {
-	width: 100%; /* Ensure images take full width available */
-	max-width: 480px; /* Set a max width to prevent images from being too large */
-	height: auto; /* Maintain aspect ratio */
-	display: block;
-	margin: 0 auto; /* Center the images */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box; /* Ensures consistent sizing across all elements */
 }
 
-/* Spacing between images in the container */
+html,
+body {
+	width: 100%;
+	height: 100%;
+	overflow-x: hidden; /* Prevent horizontal scrolling caused by unwanted margins/padding */
+	background-color: black;
+	color: white;
+	display: flex;
+	flex-direction: column; /* Stack elements vertically */
+}
+
+body {
+	min-height: 100vh; /* Ensure the body takes up the full viewport height */
+}
+
 .container {
-	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive grid */
-	grid-gap: 24px; /* Add space between images */
-	justify-items: center; /* Center images horizontally */
-	margin: 20px 0; /* Space around the grid container */
-	padding: 0 16px; /* Padding on both sides */
+	flex: 1; /* Expands to push footer down */
+	width: 100%;
+	max-width: 1200px; /* Restrict maximum width for the content */
+	margin: 0 auto;
+	padding: 0 24px;
+	text-align: center;
+	padding-bottom: 33px;
 }
 
-/* Responsive behavior */
-@media screen and (max-width: 768px) {
-	.container {
-		grid-template-columns: repeat(
-			auto-fit,
-			minmax(150px, 1fr)
-		); /* Adjust the minimum width on smaller screens */
-		grid-gap: 16px; /* Reduce gap on smaller screens */
-	}
+/* Logo Styling */
+.responsive-logo {
+	width: 100%;
+	max-width: 480px;
+	height: auto;
+	margin-top: 19px;
 }
 
-/* Title image scaling */
-header img {
-	width: 100%; /* Title image takes the full width of the container */
-	height: auto; /* Maintain aspect ratio */
-	max-width: 960px; /* Set a maximum width */
-	margin: 0 auto; /* Center the title image */
-}
-
-/* Center and make <h2> responsive */
-h2 {
-	color: rgb(26, 213, 9);
-	font-family: 'raleway-light';
-	text-align: center; /* Center text */
-	padding: 0 16px; /* Add padding to prevent text from touching the edges */
-	line-height: 1.5em; /* Improve readability */
-	font-size: 1.5rem; /* Default font size */
-}
-
-/* Make <h2> responsive */
-@media screen and (max-width: 768px) {
-	h2 {
-		font-size: 1.2rem; /* Reduce font size on smaller screens */
-	}
-}
-
-@media screen and (max-width: 480px) {
-	h2 {
-		font-size: 1rem; /* Further reduce font size on very small screens */
-	}
-}
-
-/* Button styles */
+/* Header and Button Styles */
 .home-button {
 	position: fixed;
 	top: 10px;
@@ -94,20 +62,119 @@ h2 {
 	border: none;
 	border-radius: 5px;
 	cursor: pointer;
-	margin-bottom: 10px;
 }
 
-/* Link inside button */
 .home-button a {
 	color: black;
 	text-decoration: none;
 }
 
-/* Image hover effect */
-.image1 {
-	transition: transform 1s;
+/* Product Grid */
+.product-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	grid-gap: 40px;
+	margin-top: 20px;
+	justify-content: center;
+	padding-left: 15px;
+	padding-right: 15px;
 }
-.image1:hover {
+
+/* Styling for Links in Product Grid */
+.product-grid a {
+	text-decoration: none; /* Removes underline */
+	color: rgb(26, 213, 9); /* Matches design color */
+}
+
+.product-grid a:visited {
+	color: rgb(26, 213, 9); /* Ensures visited links have the same color */
+	text-decoration: none; /* Removes underline from visited links */
+}
+
+.product-grid a:hover {
+	text-decoration: none; /* Keeps no underline on hover */
+}
+
+.product-grid a:active {
+	text-decoration: none; /* No underline on active links */
+}
+
+/* Image Styling */
+.image1,
+.image2,
+.image3 {
+	max-width: 200px;
+	height: auto;
+	transition: transform 1s;
+	filter: drop-shadow(0 0 4px rgb(26, 213, 9));
+}
+
+.image1:hover,
+.image2:hover,
+.image3:hover {
 	transform: scale(1.2);
-	z-index: 2;
+	filter: drop-shadow(0 0 6px rgb(26, 213, 9));
+}
+
+/* Typography */
+h2 {
+	color: rgb(26, 213, 9);
+	font-family: 'raleway-light';
+}
+
+h1 {
+	color: rgb(26, 213, 9);
+	font-family: 'raleway-light';
+}
+
+p {
+	font-size: 30px;
+}
+
+/* Footer */
+footer {
+	background-color: rgb(26, 213, 9);
+	color: black;
+	text-align: center;
+	padding: 20px;
+	width: 100%; /* Ensures full-width footer */
+	margin-top: auto; /* Pushes footer to the bottom */
+}
+
+footer .social-links {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 20px;
+	margin: 0 auto; /* Center the icons */
+}
+
+footer .social-links img {
+	width: 80px;
+	height: auto;
+	transition: transform 0.3s ease;
+}
+
+footer .social-links img:hover {
+	transform: scale(1.2);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+	.product-grid {
+		grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+		grid-gap: 20px;
+	}
+
+	.image1,
+	.image2,
+	.image3 {
+		width: 100%;
+	}
+}
+
+@media (max-width: 430px) {
+	.extra-text {
+		display: none;
+	}
 }
