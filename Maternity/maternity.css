@@ -1,3 +1,4 @@
+/* Global Styles */
 @font-face {
 	font-family: raleway;
 	src: url(Raleway/Raleway-VariableFont_wght.ttf);
@@ -11,88 +12,46 @@
 	src: url(Raleway/static/Raleway-SemiBold.ttf);
 }
 
-.container {
-	padding-top: 24px;
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box; /* Ensures consistent sizing across all elements */
 }
 
+html,
 body {
+	width: 100%;
+	height: 100%;
+	overflow-x: hidden; /* Prevent horizontal scrolling caused by unwanted margins/padding */
 	background-color: black;
 	color: white;
-	padding-left: 24px;
-	padding-right: 24px;
-	padding-top: 8px;
+	display: flex;
+	flex-direction: column; /* Stack elements vertically */
 }
-img {
-	width: 480px;
-	height: auto;
-}
-h2 {
-	color: rgb(26, 213, 9);
-	background-color: none;
-	font-family: 'raleway-light';
-}
+
 body {
-	margin-right: 24px;
-	margin-left: 24px;
+	min-height: 100vh; /* Ensure the body takes up the full viewport height */
 }
 
 .container {
+	flex: 1; /* Expands to push footer down */
+	width: 100%;
+	max-width: 1200px; /* Restrict maximum width for the content */
+	margin: 0 auto;
+	padding: 0 24px;
 	text-align: center;
-	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-	grid-template-rows: 1em 1em 1em;
-	grid-auto-rows: 2em;
-	grid-gap: 380px;
-	margin: 40 100px;
-}
-.container h2 {
-	margin: 0;
-	padding: 0em;
+	padding-bottom: 33px;
 }
 
-a {
-	color: rgb(26, 213, 9);
-	text-decoration: none;
-	text-align: center;
-}
-a:hover {
-	color: aqua;
-}
-.image1 {
-	height: 10em;
-	width: auto;
-}
-.image2 {
-	height: 10em;
-	width: auto;
-}
-.image3 {
-	height: 10em;
-	width: auto;
+/* Logo Styling */
+.responsive-logo {
+	width: 100%;
+	max-width: 480px;
+	height: auto;
+	margin-top: 19px;
 }
 
-.image1 {
-	transition: 1s;
-}
-.image1:hover {
-	transform: scale(1.2);
-	z-index: 2;
-}
-
-.image2 {
-	transition: 1s;
-}
-.image2:hover {
-	transform: scale(1.2);
-	z-index: 2;
-}
-.image3 {
-	transition: 1s;
-}
-.image3:hover {
-	transform: scale(1.2);
-	z-index: 2;
-}
+/* Header and Button Styles */
 .home-button {
 	position: fixed;
 	top: 10px;
@@ -103,11 +62,119 @@ a:hover {
 	border: none;
 	border-radius: 5px;
 	cursor: pointer;
-	margin-bottom: 10px;
 }
 
-/* Style the link inside the button */
 .home-button a {
 	color: black;
 	text-decoration: none;
+}
+
+/* Product Grid */
+.product-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	grid-gap: 40px;
+	margin-top: 20px;
+	justify-content: center;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+/* Styling for Links in Product Grid */
+.product-grid a {
+	text-decoration: none; /* Removes underline */
+	color: rgb(26, 213, 9); /* Matches design color */
+}
+
+.product-grid a:visited {
+	color: rgb(26, 213, 9); /* Ensures visited links have the same color */
+	text-decoration: none; /* Removes underline from visited links */
+}
+
+.product-grid a:hover {
+	text-decoration: none; /* Keeps no underline on hover */
+}
+
+.product-grid a:active {
+	text-decoration: none; /* No underline on active links */
+}
+
+/* Image Styling */
+.image1,
+.image2,
+.image3 {
+	max-width: 200px;
+	height: auto;
+	transition: transform 1s;
+	filter: drop-shadow(0 0 4px rgb(26, 213, 9));
+}
+
+.image1:hover,
+.image2:hover,
+.image3:hover {
+	transform: scale(1.2);
+	filter: drop-shadow(0 0 6px rgb(26, 213, 9));
+}
+
+/* Typography */
+h2 {
+	color: rgb(26, 213, 9);
+	font-family: 'raleway-light';
+}
+
+h1 {
+	color: rgb(26, 213, 9);
+	font-family: 'raleway-light';
+}
+
+p {
+	font-size: 30px;
+}
+
+/* Footer */
+footer {
+	background-color: rgb(26, 213, 9);
+	color: black;
+	text-align: center;
+	padding: 20px;
+	width: 100%; /* Ensures full-width footer */
+	margin-top: auto; /* Pushes footer to the bottom */
+}
+
+footer .social-links {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 20px;
+	margin: 0 auto; /* Center the icons */
+}
+
+footer .social-links img {
+	width: 80px;
+	height: auto;
+	transition: transform 0.3s ease;
+}
+
+footer .social-links img:hover {
+	transform: scale(1.2);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+	.product-grid {
+		grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+		grid-gap: 20px;
+	}
+
+	.image1,
+	.image2,
+	.image3 {
+		width: 100%;
+	}
+}
+
+@media (max-width: 430px) {
+	.extra-text {
+		display: none;
+	}
 }
