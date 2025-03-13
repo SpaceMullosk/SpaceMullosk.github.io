@@ -107,7 +107,7 @@ body {
 	.image1:hover,
 	.image2:hover,
 	.image3:hover {
-		transform: scale(5);
+		transform: scale(3);
 		filter: drop-shadow(0 0 6px rgb(26, 213, 9));
 		z-index: 10;
 	}
