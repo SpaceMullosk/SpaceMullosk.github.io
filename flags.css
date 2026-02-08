@@ -35,6 +35,10 @@ h2 {
 	color: rgb(26, 213, 9);
 	font-family: 'raleway-light';
 }
+h1 {
+	color: rgb(26, 213, 9);
+	font-family: 'raleway-light';
+}
 
 .container {
 	text-align: center;
@@ -137,4 +141,38 @@ a:hover {
 	.extra-text {
 		display: none;
 	}
+}
+footer {
+	background-color: rgb(26, 213, 9);
+	color: black;
+	text-align: center;
+	padding: 20px;
+	width: 100%; /* Ensures full-width footer */
+	margin-top: auto; /* Pushes footer to the bottom */
+}
+
+footer .social-links {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 20px;
+	margin: 0 auto; /* Center the icons */
+}
+
+footer .social-links img {
+	width: 80px;
+	height: auto;
+	transition: transform 0.3s ease;
+}
+
+footer .social-links img:hover {
+	transform: scale(1.2);
+}
+p {
+	font-size: 30px;
+}
+footer p {
+	font-size: 36px; /* bigger text */
+	margin: 5px 0 10px; /* less space above & below */
+	font-weight: 600; /* optional: makes it pop */
 }
